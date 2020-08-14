@@ -10,7 +10,7 @@ const Home = ({ navigation }) => {
   // JSX
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
+      <StatusBar style="auto" hidden />
       <UserProfileBar />
       <UserPropertyMenu navigation={navigation} />
       <MyAppText style={styles.propertyListHeader}>My Property</MyAppText>

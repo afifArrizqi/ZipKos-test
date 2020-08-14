@@ -1,7 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "./components/Home/Home";
 import NewProperty from "./components/AddProperty/NewProperty";
 import MyTabs from "./components/MyTabs";
 
@@ -11,7 +10,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="MyTabs" component={MyTabs} />
+        <Stack.Screen
+          name="MyTabs"
+          component={MyTabs}
+          options={{
+            headerShown: false,
+          }}
+        />
         <Stack.Screen
           name="NewProperty"
           component={NewProperty}

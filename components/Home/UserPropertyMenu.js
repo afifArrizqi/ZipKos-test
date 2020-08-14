@@ -2,6 +2,9 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import MyAppText from "../MyAppText";
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
 
 const UserPropertyMenu = ({ navigation }) => {
   // Navigation Function
