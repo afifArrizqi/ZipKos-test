@@ -1,10 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import MyAppText from "../MyAppText";
-import { createStackNavigator } from "@react-navigation/stack";
-
-const Stack = createStackNavigator();
 
 const UserPropertyMenu = ({ navigation }) => {
   // Navigation Function
@@ -16,10 +12,18 @@ const UserPropertyMenu = ({ navigation }) => {
   return (
     <View style={styles.inlineContainer}>
       <TouchableOpacity style={styles.button} onPress={addPropertyNavigation}>
-        <MyAppText style={styles.button_white_font}>Add Property</MyAppText>
+        <Image
+          source={require("../../assets/addProperty.png")}
+          style={styles.buttonImageBackground}
+        />
+        <Text style={styles.button_white_font}>Add Property</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={addPropertyNavigation}>
-        <MyAppText style={styles.button_white_font}>Manage Rooms</MyAppText>
+        <Image
+          source={require("../../assets/manage-rooms.png")}
+          style={styles.buttonImageBackground}
+        />
+        <Text style={styles.button_white_font}>Manage Rooms</Text>
       </TouchableOpacity>
     </View>
   );
@@ -32,6 +36,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
+    marginVertical: 10,
   },
   button: {
     backgroundColor: "#fff",
@@ -56,5 +61,13 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
     letterSpacing: 0.8,
     color: "#00b6b9",
+  },
+  buttonImageBackground: {
+    position: "absolute",
+    top: "40%",
+    opacity: 0.2,
+    width: 40,
+    height: 40,
+    alignSelf: "flex-start",
   },
 });

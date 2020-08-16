@@ -1,13 +1,10 @@
-import React, { useEffect } from "react";
-import { View, Text, BackHandler } from "react-native";
+import React from "react";
+import { View, Text } from "react-native";
 
 export default function ExitApp() {
-  useEffect(() => {
-    BackHandler.exitApp();
-  });
   return (
     <View>
-      <Text>Exit</Text>
+      <Text>Logout</Text>
     </View>
   );
 }

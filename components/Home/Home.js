@@ -4,7 +4,6 @@ import { StyleSheet, Text, View } from "react-native";
 import PropertyList from "./PropertyList";
 import UserProfileBar from "./UserProfileBar";
 import UserPropertyMenu from "./UserPropertyMenu";
-import MyAppText from "../MyAppText";
 
 const Home = ({ navigation }) => {
   // JSX
@@ -13,7 +12,7 @@ const Home = ({ navigation }) => {
       <StatusBar style="auto" hidden />
       <UserProfileBar />
       <UserPropertyMenu navigation={navigation} />
-      <MyAppText style={styles.propertyListHeader}>My Property</MyAppText>
+      <Text style={styles.propertyListHeader}>My Property</Text>
       <PropertyList />
     </View>
   );

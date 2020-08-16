@@ -16,7 +16,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Facility from "./Facility";
 
-const Facilities = () => {
+const Facilities = ({ onFacilityChange }) => {
   const [facilitiesList, setFacilitiesList] = useState([
     { id: 0, name: "wifi", state: false, icon: faWifi, title: "Free Wi-Fi" },
     { id: 1, name: "ac", state: false, icon: faFan, title: "AC" },
@@ -52,8 +52,13 @@ const Facilities = () => {
 
   const selectFacilities = (facilitiesUpdate) => {
     const newFacilitiesList = [...facilitiesList];
+    let FacilitiesNameList = [];
     newFacilitiesList[facilitiesUpdate.id] = facilitiesUpdate;
+    FacilitiesNameList = newFacilitiesList
+      .filter((facility) => facility.state)
+      .map(({ title }) => title);
     setFacilitiesList(newFacilitiesList);
+    onFacilityChange(FacilitiesNameList);
   };
 
   return (

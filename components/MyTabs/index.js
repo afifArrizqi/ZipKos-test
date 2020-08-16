@@ -22,8 +22,9 @@ const MyTabs = () => {
       tabBarOptions={{
         activeTintColor: "#00b6b9",
         style: {
-          paddingVertical: 10,
-          height: 60,
+          paddingBottom: 15,
+          paddingTop: 3,
+          height: 70,
         },
       }}
     >
@@ -71,6 +72,9 @@ const MyTabs = () => {
                   backgroundColor: "#ff3529",
                   borderRadius: 50,
                   padding: 15,
+                  marginBottom: 5,
+                  borderColor: "#fff",
+                  borderWidth: 15,
                 }}
               >
                 <FontAwesomeIcon icon={faDoorOpen} color="#fff" size={30} />
