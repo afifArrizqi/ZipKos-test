@@ -88,10 +88,10 @@ const NewProperty = ({ navigation }) => {
         </View>
 
         {/** Property Location SHOW (*Does not work Yet)*/}
-        <View style={styles.form}>
+        {/*<View style={styles.form}>
           <Text style={styles.formTitle}>Location</Text>
           <LocationMap />
-        </View>
+        </View> */}
 
         {/** Property Photos Input*/}
         <View style={styles.form}>

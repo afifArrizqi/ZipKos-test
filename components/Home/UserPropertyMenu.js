@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 const UserPropertyMenu = ({ navigation }) => {
@@ -31,6 +31,8 @@ const UserPropertyMenu = ({ navigation }) => {
 
 export default UserPropertyMenu;
 
+const windowWidth = Dimensions.get("window").width - 20;
+
 const styles = StyleSheet.create({
   inlineContainer: {
     display: "flex",
@@ -41,8 +43,8 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#fff",
     alignItems: "center",
-    paddingHorizontal: 25,
     paddingVertical: 18,
+    width: windowWidth / 2,
     borderStyle: "solid",
     borderColor: "#333",
     borderRadius: 5,
